@@ -161,7 +161,7 @@ preparation — citation details will be added here once published.
 
 | Author | Affiliation | Contact | ORCID / Profiles |
 |---|---|---|---|
-| Gianluca Bruno | Rutgers University – CAIT; Politecnico di Bari | gianluca.bruno@rutgers.edu | [ORCID](https://orcid.org/0009-0009-6965-3126) · [ResearchGate](https://www.researchgate.net/profile/Gianluca-Bruno-2) · Scopus 59692398300 |
+| Gianluca Bruno | Rutgers University – CAIT; Politecnico di Bari | gianluca.bruno@rutgers.edu g.bruno15@phd.poliba.it | [ORCID](https://orcid.org/0009-0009-6965-3126) · [ResearchGate](https://www.researchgate.net/profile/Gianluca-Bruno-2) · Scopus 59692398300 |
 | Fabio Parisi | Politecnico di Bari | fabio.parisi@poliba.it | [ResearchGate](https://www.researchgate.net/profile/Fabio-Parisi-2) · Scopus 57212473555 |
 | Sergio Ruggieri | Politecnico di Bari | sergio.ruggieri@poliba.it | [ORCID](https://orcid.org/0000-0001-5119-8967) · [ResearchGate](https://www.researchgate.net/profile/Sergio-Ruggieri-2) · Scopus 57200721168 |
 
