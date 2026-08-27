@@ -1,0 +1,39 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata below. If you use it in academic work, please also cite the accompanying paper once published (see README)."
+type: software
+title: "SAP.py2.0"
+abstract: >
+  A Python-based tool that interfaces with SAP2000 via its OAPI/comtypes
+  COM layer to automate combinatorial generation of structural damage
+  scenarios, producing labeled modal-analysis datasets for downstream
+  ML/AI training in structural health monitoring (SHM) research. Dataset
+  generation is deliberately decoupled from any optimization or
+  model-updating loop.
+authors:
+  - family-names: Bruno
+    given-names: Gianluca
+    affiliation: "Rutgers University - CAIT; Politecnico di Bari"
+    email: gianluca.bruno@rutgers.edu
+    orcid: "https://orcid.org/0009-0009-6965-3126"
+  - family-names: Parisi
+    given-names: Fabio
+    affiliation: "Politecnico di Bari"
+    email: fabio.parisi@poliba.it
+  - family-names: Ruggieri
+    given-names: Sergio
+    affiliation: "Politecnico di Bari"
+    email: sergio.ruggieri@poliba.it
+    orcid: "https://orcid.org/0000-0001-5119-8967"
+version: 1.0.0
+date-released: "2026-08-27"
+license: MIT
+repository-code: "https://github.com/<your-github-username>/SAP.py2.0"
+keywords:
+  - structural health monitoring
+  - damage detection
+  - SAP2000
+  - OAPI
+  - machine learning
+  - finite element modeling
+  - modal analysis
+  - dataset generation
