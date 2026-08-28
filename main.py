@@ -231,7 +231,7 @@ campaigns, for use in training ML/statistical models.
 
 Reference: [paper reference to be added]
 
-Created by Gianluca Bruno.
+Created by Gianluca Bruno, Fabio Parisi, Sergio Ruggieri.
 ========================================================================
 """
 
