@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite it using the metadata below. If you use it in academic work, please also cite the accompanying paper once published (see README)."
+message: "If you use this software, please cite both the software itself and the accompanying paper below."
 type: software
 title: "SAP.py2.0"
 abstract: >
@@ -25,9 +25,9 @@ authors:
     email: sergio.ruggieri@poliba.it
     orcid: "https://orcid.org/0000-0001-5119-8967"
 version: 1.0.0
-date-released: "2026-08-27"
+date-released: "2026-09-23"
 license: MIT
-repository-code: "https://github.com/<your-github-username>/SAP.py2.0"
+repository-code: "https://github.com/bri-no/SAP.py2.0"
 keywords:
   - structural health monitoring
   - damage detection
@@ -37,3 +37,24 @@ keywords:
   - finite element modeling
   - modal analysis
   - dataset generation
+preferred-citation:
+  type: article
+  title: "SAP.py2.0: A Python Tool for Automated Dataset Generation of Structural Scenarios via SAP2000 OAPI"
+  authors:
+    - family-names: Bruno
+      given-names: Gianluca
+      orcid: "https://orcid.org/0009-0009-6965-3126"
+    - family-names: Parisi
+      given-names: Fabio
+    - family-names: Ruggieri
+      given-names: Sergio
+      orcid: "https://orcid.org/0000-0001-5119-8967"
+  journal: "Computation"
+  publisher:
+    name: "MDPI"
+  volume: 14
+  issue: 10
+  start: "224"
+  year: 2026
+  doi: "10.3390/computation14100224"
+  url: "https://doi.org/10.3390/computation14100224"

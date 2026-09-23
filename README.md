@@ -3,6 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 ![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-blue)
 ![Platform: Windows](https://img.shields.io/badge/platform-Windows-lightgrey)
+[![DOI](https://img.shields.io/badge/DOI-10.3390%2Fcomputation14100224-blue)](https://doi.org/10.3390/computation14100224)
 
 A CLI tool for **SAP2000** (via the OAPI/comtypes interface) that updates
 structural model parameters — frame/shell material stiffness, internal
@@ -17,18 +18,21 @@ parameters across a defined range, it produces the kind of labeled
 scenario data that is often missing from real-world monitoring
 campaigns, for use in training ML/statistical models.
 
-> 📄 Reference paper: *[to be added upon publication]*
+> 📄 **Paper:** Bruno, G.; Parisi, F.; Ruggieri, S. *SAP.py2.0: A Python
+> Tool for Automated Dataset Generation of Structural Scenarios via
+> SAP2000 OAPI.* Computation **2026**, 14(10), 224.
+> [https://doi.org/10.3390/computation14100224](https://doi.org/10.3390/computation14100224)
 
 ---
 
 ## 🔬 Development status
 
-SAP.py2.0 is an active research tool, not a finished commercial product.
-Dataset generation is **intentionally decoupled** from any optimization
-or model-updating loop — that is a deliberate design choice, not a
-missing feature, distinguishing this version from the prior SAP.py v1.0
-(presented at WCEE2024). Interfaces and CSV schemas may still change
-between versions. Treat it as a research prototype.
+SAP.py2.0 is an active research tool. Dataset generation is
+**intentionally decoupled** from any optimization or model-updating
+loop — that is a deliberate design choice, not a missing feature,
+distinguishing this version from the prior SAP.py v1.0 (presented at
+WCEE2024). Interfaces and CSV schemas may still change between
+versions.
 
 ---
 
@@ -39,7 +43,7 @@ between versions. Treat it as a research prototype.
 Recommended if you want to read, modify, or extend the tool.
 
 ```bash
-git clone https://github.com/<your-github-username>/SAP.py2.0.git
+git clone https://github.com/bri-no/SAP.py2.0.git
 cd SAP.py2.0
 pip install -r requirements.txt
 python main.py
@@ -59,7 +63,7 @@ Precompiled Windows binaries are provided in [`dist/`](dist/):
 | File | Description |
 |---|---|
 | [`SAP.py2.0.exe`](dist/SAP.py2.0.exe) | Full CLI tool — same functionality as running `main.py` from source. |
-| [`SAP.py2.0_GUI.exe`](dist/SAP.py2.0_GUI.exe) | Graphical wrapper around the same logic. **Bonus binary**: distributed compiled-only, source not yet published in this repository. |
+| [`SAP.py2.0_GUI.exe`](dist/SAP.py2.0_GUI.exe) | Graphical wrapper around the same core logic — the interface featured and demonstrated in the paper. **Bonus binary**: distributed compiled-only, source not yet published in this repository. |
 
 Just download and double-click — no Python installation needed. SAP2000
 must still be installed and licensed on the machine.
@@ -96,6 +100,11 @@ Two modes:
   single shared column instead of one column each — you choose this
   coupling explicitly per parameter group, rather than it being inferred.
 
+The tool was validated on a real, complex masonry/RC building in the
+port of Bari, Italy — see the paper for the full case study (225
+generated scenarios, variance-based sensitivity analysis on the
+resulting dataset).
+
 ---
 
 ## 📁 Project structure
@@ -130,30 +139,33 @@ SAP.py2.0/
   repository does not include or redistribute any CSI software.
 - The GUI is currently distributed as a compiled executable only; its
   source is not yet part of this public repository.
-- CSV schema and parameter category set are expected to evolve as the
-  tool is extended (see development status above).
+- No optimization or model-updating module is included by design — see
+  the paper's Discussion section for the reasoning.
+- No checkpointing: an unexpected crash mid-batch does not resume from
+  where it left off, though every completed scenario up to that point
+  is already saved to the CSV (see paper, Section 4).
 
 ---
 
 ## 📚 Cite this work
 
-If you use SAP.py2.0 in your research, please cite it — see
+If you use SAP.py2.0 in your research, please cite the paper — see
 [`CITATION.cff`](CITATION.cff) for machine-readable metadata (also
 usable directly via GitHub's "Cite this repository" button).
 
 ```bibtex
-@software{Bruno_SAP_py2_0,
+@article{bruno2026sappy2,
   author  = {Bruno, Gianluca and Parisi, Fabio and Ruggieri, Sergio},
-  title   = {{SAP.py2.0}},
+  title   = {{SAP.py2.0}: A Python Tool for Automated Dataset Generation of Structural Scenarios via SAP2000 OAPI},
+  journal = {Computation},
+  volume  = {14},
+  number  = {10},
+  pages   = {224},
   year    = {2026},
-  license = {MIT},
-  url     = {https://github.com/<your-github-username>/SAP.py2.0}
+  doi     = {10.3390/computation14100224},
+  url     = {https://doi.org/10.3390/computation14100224}
 }
 ```
-
-A companion paper describing the tool and an illustrative case study
-(a mixed masonry/RC building in the port of Bari, Italy) is in
-preparation — citation details will be added here once published.
 
 ---
 
@@ -161,9 +173,12 @@ preparation — citation details will be added here once published.
 
 | Author | Affiliation | Contact | ORCID / Profiles |
 |---|---|---|---|
-| Gianluca Bruno | Rutgers University – CAIT; Politecnico di Bari | gianluca.bruno@rutgers.edu g.bruno15@phd.poliba.it | [ORCID](https://orcid.org/0009-0009-6965-3126) · [ResearchGate](https://www.researchgate.net/profile/Gianluca-Bruno-2) · Scopus 59692398300 |
+| Gianluca Bruno | Rutgers University – CAIT; Politecnico di Bari | gianluca.bruno@rutgers.edu | [ORCID](https://orcid.org/0009-0009-6965-3126) · [ResearchGate](https://www.researchgate.net/profile/Gianluca-Bruno-2) · Scopus 59692398300 |
 | Fabio Parisi | Politecnico di Bari | fabio.parisi@poliba.it | [ResearchGate](https://www.researchgate.net/profile/Fabio-Parisi-2) · Scopus 57212473555 |
 | Sergio Ruggieri | Politecnico di Bari | sergio.ruggieri@poliba.it | [ORCID](https://orcid.org/0000-0001-5119-8967) · [ResearchGate](https://www.researchgate.net/profile/Sergio-Ruggieri-2) · Scopus 57200721168 |
+
+**Acknowledgments:** the authors thank CSI Italy for providing free
+academic licenses of SAP2000 to Politecnico di Bari.
 
 ---
 
